@@ -1,0 +1,6 @@
+.DS_Store
+
+# disable module
+/tailwind/.DS_Store
+/tailwind/node_modules/
+/tailwind/dist/output.css
