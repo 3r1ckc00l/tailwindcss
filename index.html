@@ -1,19 +1,40 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/tailwind/dist/output.css" rel="stylesheet">
-  <link href="/css/main.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello, this is tailwind css!
-  </h1>
-  <div class="flex flex-row">
-    <div class="basis-1/4">01</div>
-    <div class="basis-1/4">02</div>
-    <div class="basis-1/2">03</div>
-  </div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link href="./tailwind/dist/output.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+      <h1 class="first-text text-3xl font-bold underline">
+        Hello, this is tailwind css!
+      </h1>
+      <p class="second-text font-extralight">
+        Enjoy the code.
+      </p>
+      <div class="flex flex-row mb-10">
+        <div class="basis-1/4">01</div>
+        <div class="basis-1/4">02</div>
+        <div class="basis-1/2">03</div>
+      </div>
+    
+      <button onclick="showContent()">Show hidden content</button>
+      <template>
+        <h2>Flower</h2>
+        <img src="img_white_flower.jpg" width="214" height="204">
+      </template>
+    </main>
+    <script>
+      function showContent() {
+        let temp = document.getElementsByTagName("template")[0];
+        let clon = temp.content.cloneNode(true);
+        document.body.appendChild(clon);
+      }
+    </script> 
+  </body>
 </html>
